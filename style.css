@@ -153,3 +153,8 @@ a {text-decoration: none;}
   .container .img img {border-radius: 50%;}
 }
 .active {color: #fff;}
+.projects {
+  padding-top: 30px;
+  border-top: 1px solid #02457a;
+  margin-top: 15px;
+}

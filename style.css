@@ -12,7 +12,10 @@
   text-decoration: none;
 }
 body {font-family: "Cairo", sans-serif;}
-a {text-decoration: none;}
+a {
+  text-decoration: none;
+  color: #02457a;
+}
 .mode-btn {
   position: absolute;
   top: 20px;
@@ -24,7 +27,8 @@ a {text-decoration: none;}
 .profile-card {
   position: relative;
   background-image: url(bg.jpg);
-  background-size: cover;
+  background-size: contain;
+  background-position: center center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +40,7 @@ a {text-decoration: none;}
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0, 0, 0, 0.55);
+  background-color: rgb(0, 0, 0, 0.2);
 }
 .container {
   position: relative;

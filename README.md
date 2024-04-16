@@ -1,2 +1,1 @@
-KHALED AHMED SWIDAN
-ReactJS Developer
+KHALED AHMED SWIDAN / ReactJS Developer

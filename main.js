@@ -27,3 +27,23 @@ btn.addEventListener("click", () => {
     btn.innerHTML = "🌙";
   }
 });
+
+const techSkills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "Bootstrap5",
+  "Tailwind CSS",
+  "SCSS",
+  "Responsive UI Design",
+  "EcmaScript6",
+  "TypeScript",
+  "Git & GitHub",
+  "React",
+  "Redux",
+  "Redux Toolkit",
+  "Software Testing"
+];
+document.getElementById("techSkillsMap").innerText = techSkills.map(
+  (e) => e + "  "
+);

@@ -11,10 +11,22 @@
   border: none;
   text-decoration: none;
 }
-body {font-family: "Cairo", sans-serif;}
+body {
+  font-family: "Cairo", sans-serif;
+}
 a {
   text-decoration: none;
   color: #02457a;
+}
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+.contentSegment {
+  padding-top: 30px;
+  border-top: 1px solid #02457a;
+  margin-top: 15px;
+  position: relative;
 }
 .mode-btn {
   position: absolute;
@@ -48,7 +60,7 @@ a {
   width: 800px;
   border-radius: 10px;
   padding: 30px;
-  margin: 2rem .5rem;
+  margin: 2rem 0.5rem;
 }
 .container .overlay {
   position: absolute;
@@ -69,8 +81,8 @@ a {
   position: absolute;
   top: 15px;
   right: 15px;
-  width: 200px;
-  height: 200px;
+  width: 187px;
+  height: 190px;
   z-index: 100;
 }
 .container .img img {
@@ -91,7 +103,7 @@ a {
   margin-bottom: 15px;
   position: relative;
 }
-.container .info h1::after{
+.container .info h1::after {
   content: "";
   position: absolute;
   width: 50%;
@@ -107,7 +119,7 @@ a {
   align-items: center;
   transition: all 0.3s ease;
 }
-.container .info p:not(:last-of-type):hover{
+.container .info p:not(:last-of-type):hover {
   transform: translateX(10px);
   transition: all 0.3s ease;
 }
@@ -129,13 +141,13 @@ a {
   color: var(--main-color);
   padding-right: 15px;
 }
-.tech{
+.tech {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .container .links,
-.container .tools{
+.container .tools {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -143,8 +155,8 @@ a {
   position: relative;
   z-index: 100;
   box-shadow: 0 0 3px #02457a;
-  border-radius: .375rem;
-  padding: .3rem .8rem;
+  border-radius: 0.375rem;
+  padding: 0.3rem 0.8rem;
 }
 .container .links a,
 .container .tools i {
@@ -152,8 +164,12 @@ a {
   height: 40px;
   transition: all 0.3s ease;
 }
-.container .links a:not(:last-of-type){margin-right: 10px;}
-.container .links a:hover {color: var(--main-color);}
+.container .links a:not(:last-of-type) {
+  margin-right: 10px;
+}
+.container .links a:hover {
+  color: var(--main-color);
+}
 .container .tools i:nth-child(1):hover,
 .container .tools i:nth-child(2):hover,
 .container .tools i:nth-child(3):hover,
@@ -164,9 +180,15 @@ a {
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
-.container .tools i:nth-child(1) {color: #e54c21;}
-.container .tools i:nth-child(2) {color: #214ce5;}
-.container .tools i:nth-child(3) {color: #d1af35;}
+.container .tools i:nth-child(1) {
+  color: #e54c21;
+}
+.container .tools i:nth-child(2) {
+  color: #214ce5;
+}
+.container .tools i:nth-child(3) {
+  color: #d1af35;
+}
 .container .tools i:nth-child(4) {
   color: #7431f9;
   margin-right: 10px;
@@ -174,16 +196,18 @@ a {
 .container .tools i:nth-child(5) {
   color: #61dafb;
   background-color: #20232a;
-  border-radius: .375rem;
+  border-radius: 0.375rem;
   margin-right: 10px;
 }
 .container .tools i:nth-child(6) {
-  border-radius: .375rem;
+  border-radius: 0.375rem;
   margin-right: 10px;
 }
-.container .tools i:nth-child(7) {color: #c76494;}
+.container .tools i:nth-child(7) {
+  color: #c76494;
+}
 .container .links a i,
-.container .tools i{
+.container .tools i {
   line-height: 40px;
   font-size: 40px;
 }
@@ -196,26 +220,44 @@ a {
     right: auto;
     margin-bottom: 15px;
   }
-  .container .info h1 {font-size: 30px;}
-  .container .img img {border-radius: 50%;}
-  .tech{
+  .container .info h1 {
+    font-size: 30px;
+  }
+  .container .img img {
+    border-radius: 50%;
+  }
+  .tech {
     flex-direction: column;
     align-items: flex-start;
   }
 }
-.active {color: #fff;}
-.description {
-  padding-top: 30px;
-  border-top: 1px solid #02457a;
-  margin-top: 15px;
-  position: relative;
+.active {
+  color: #fff;
 }
-.proj{
+.proj {
   border-radius: 0.375rem;
   border: 1px solid #02457a;
   padding: 0.5rem 0.9rem;
   width: 100%;
 }
-.proj:not(:last-of-type){
+.proj:not(:last-of-type) {
   margin-bottom: 10px;
+}
+.skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.softSkills,
+.techSkills {
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .skills {
+    display: block;
+  }
+  .softSkills,
+  .techSkills {
+    width: 100%;
+  }
 }

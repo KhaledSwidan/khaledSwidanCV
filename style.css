@@ -37,15 +37,6 @@ ul {
   position: relative;
 }
 
-.mode-btn {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 1000;
-}
-
 .profile-card {
   position: relative;
   background: url(bg.jpg) center/contain repeat;

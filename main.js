@@ -1,49 +1,38 @@
-const overlay = document.querySelector(".overlay");
-const btn = document.querySelector(".mode-btn");
-const h1 = document.querySelector("h1");
-const lastP = document.querySelector(".container p:last-of-type");
-const jobTitle = document.querySelector(".container p span");
-const projects = document.querySelector(".projects");
+const elements = {
+  overlay: document.querySelector('.overlay'),
+  btn: document.querySelector('.mode-btn'),
+  h1: document.querySelector('h1'),
+  lastP: document.querySelector('.container p:last-of-type'),
+  jobTitle: document.querySelector('.container p span'),
+  projects: document.querySelector('.projects'),
+};
 
-btn.addEventListener("click", () => {
-  if (
-    !h1.classList.contains("active") &&
-    !lastP.classList.contains("active") &&
-    !jobTitle.classList.contains("active") &&
-    !projects.classList.contains("active")
-  ) {
-    h1.classList.add("active");
-    lastP.classList.add("active");
-    projects.classList.add("active");
-    jobTitle.style.color = "#fff";
-    overlay.style.background = "#1a202c";
-    btn.innerHTML = "☀️";
-  } else {
-    h1.classList.remove("active");
-    lastP.classList.remove("active");
-    projects.classList.remove("active");
-    jobTitle.style.color = "#000";
-    overlay.style.background = "#e2e8f0";
-    btn.innerHTML = "🌙";
-  }
+const toggleElements = [elements.h1, elements.lastP, elements.projects];
+
+elements.btn.addEventListener('click', () => {
+  const isActive = elements.h1.classList.contains('active');
+
+  toggleElements.forEach((el) => el.classList.toggle('active'));
+  elements.jobTitle.style.color = isActive ? '#000' : '#fff';
+  elements.overlay.style.background = isActive ? '#e2e8f0' : '#1a202c';
+  elements.btn.innerHTML = isActive ? '🌙' : '☀️';
 });
 
 const techSkills = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "Bootstrap5",
-  "Tailwind CSS",
-  "SCSS",
-  "Responsive UI Design",
-  "EcmaScript6",
-  "TypeScript",
-  "Git & GitHub",
-  "React",
-  "Redux",
-  "Redux Toolkit",
-  "Software Testing"
+  'HTML5 - ',
+  'CSS3 - ',
+  'JavaScript - ',
+  'Bootstrap5 - ',
+  'Tailwind - ',
+  'Responsive UI Design - ',
+  'EcmaScript6 - ',
+  'TypeScript - ',
+  'Git & GitHub - ',
+  'React - ',
+  'Next.js - ',
+  'Redux Toolkit - ',
+  'Software Testing - ',
+  'Prisma ORM',
 ];
-document.getElementById("techSkillsMap").innerText = techSkills.map(
-  (e) => e + "  "
-);
+
+document.getElementById('techSkillsMap').innerText = techSkills.join('  ');
